@@ -21,3 +21,4 @@ loading...
 
 - [ ] figure out how to disable liveload in none dev environment
 - [x] integrate swagger2
+- [x] exception integration

@@ -28,7 +28,7 @@ public class HelloWorldControlerTests {
 
     @Test
     public void getHello() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/hello")
+        mvc.perform(MockMvcRequestBuilders.get("/greet/hello")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print())
@@ -37,7 +37,7 @@ public class HelloWorldControlerTests {
 
     @Test
     public void getBye() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/bye")
+        mvc.perform(MockMvcRequestBuilders.get("/greet/bye")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string("Bye"))
