@@ -92,3 +92,9 @@ configurations {
 - [ ] log integration
 - [ ] cache integration
 - [ ] MyBatis integration
+
+
+## References
+
+[SpringBoot-Learning](http://git.oschina.net/didispace/SpringBoot-Learning)
+[springboot-learning-example](https://git.oschina.net/jeff1993/springboot-learning-example)
