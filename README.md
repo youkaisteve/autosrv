@@ -62,11 +62,33 @@ configurations {
 
 具体配置参考src/main/resources/log4j.properties
 
+### 安全认证
+
+``TODO``
+
+- [ ] 优化认证功能的结构,考虑如何独立使用
+- [ ] 详细介绍WebSecurity机制
+
+### 依赖注入
+
+``TODO``
+
+- [ ] 介绍使用方法
+
+[参考文章](https://stormpath.com/blog/spring-boot-dependency-injection)
+
+### Spring-data-jpa
+
+``TODO``
+
+- [ ] Spring-data-jpa 详细介绍使用方法
+
 ## TODO
 
 - [ ] figure out how to disable liveload in none dev environment
 - [x] integrate swagger2
 - [x] 统一处理业务异常
+- [x] Security with jwts [Refer to](https://auth0.com/blog/securing-spring-boot-with-jwts/)
 - [ ] log integration
 - [ ] cache integration
 - [ ] MyBatis integration
