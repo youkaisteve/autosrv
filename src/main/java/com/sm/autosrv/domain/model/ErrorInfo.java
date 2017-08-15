@@ -6,6 +6,7 @@ package com.sm.autosrv.domain.model;
 public class ErrorInfo<T> {
     public static final Integer OK = 0;
     public static final Integer BIZ_EXCEPTION = 1;
+    public static final Integer EXCEPTION = 2;
     private Integer code;
     private String message;
     private String url;

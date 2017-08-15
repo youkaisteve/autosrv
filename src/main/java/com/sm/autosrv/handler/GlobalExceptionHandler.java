@@ -12,14 +12,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {
-    @ExceptionHandler(value = BizException.class)
+    @ExceptionHandler()
     @ResponseBody
-    public ErrorInfo<String> jsonErrorHandler(HttpServletRequest req, BizException e) throws Exception {
+    public ErrorInfo<String> jsonErrorHandler(HttpServletRequest req, Exception e) throws Exception {
         ErrorInfo<String> r = new ErrorInfo<>();
-        r.setMessage(e.getMessage());
-        r.setCode(ErrorInfo.BIZ_EXCEPTION);
-        r.setData("Some Data");
         r.setUrl(req.getRequestURL().toString());
+
+        if (e.getClass() == BizException.class) {
+            r.setCode(ErrorInfo.BIZ_EXCEPTION);
+            r.setMessage(e.getMessage());
+        } else {
+            r.setCode(ErrorInfo.EXCEPTION);
+            r.setMessage("系统错误,请联系管理员");
+        }
         return r;
     }
 }

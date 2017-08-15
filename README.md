@@ -66,7 +66,7 @@ configurations {
 
 - [ ] figure out how to disable liveload in none dev environment
 - [x] integrate swagger2
-- [x] exception integration
+- [x] 统一处理业务异常
 - [ ] log integration
 - [ ] cache integration
 - [ ] MyBatis integration

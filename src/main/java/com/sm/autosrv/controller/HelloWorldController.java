@@ -19,7 +19,12 @@ public class HelloWorldController {
     }
 
     @GetMapping("/exception")
-    public String exception() throws BizException {
-        throw new BizException("发生错误");
+    public String exception() throws Exception {
+        throw new Exception("系统异常");
+    }
+
+    @GetMapping("/bizException")
+    public String bizException() throws BizException {
+        throw new BizException("业务异常");
     }
 }
