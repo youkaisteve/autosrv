@@ -23,10 +23,10 @@ import java.util.Date;
  * Created by youkai on 2017/8/15.
  * 验证
  */
-public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
     private AuthenticationManager authenticationManager;
 
-    public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
+    public JWTLoginFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
     }
 
