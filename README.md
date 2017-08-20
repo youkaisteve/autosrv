@@ -7,7 +7,7 @@ loading...
 ### auto restart
 
 ```bash
-./gradlew build --continuous
+./gradlew :api:build --continuous
 ```
 
 ### run
@@ -56,6 +56,7 @@ springboot 默认已支持
 使用Spring Security + JWT
 
 [Spring Security Reference](http://docs.spring.io/spring-security/site/docs/4.1.0.RELEASE/reference/htmlsingle/)
+
 [JWT Introduction](https://jwt.io/introduction/)
 
 ### 依赖
@@ -106,4 +107,5 @@ writing...
 ## References
 
 [SpringBoot-Learning](http://git.oschina.net/didispace/SpringBoot-Learning)
+
 [springboot-learning-example](https://git.oschina.net/jeff1993/springboot-learning-example)
