@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yzw.ibuild.dataservice.dao.data.EnergyConserveDao">
+<mapper namespace="com.sm.autosrv.data.dao.UserDao">
     <select id="getUserList" resultType="com.sm.autosrv.service.interfaces.entity.User">
         SELECT * FROM application_user
     </select>

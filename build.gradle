@@ -10,12 +10,6 @@ buildscript {
     }
 }
 
-apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-
 allprojects {
     apply plugin: 'java'
     repositories {
@@ -24,31 +18,5 @@ allprojects {
 }
 
 subprojects {
+
 }
-
-dependencies {
-    compile project(':common')
-    compile('org.springframework.boot:spring-boot-starter')
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile("org.springframework.boot:spring-boot-devtools")
-
-    compile 'mysql:mysql-connector-java:5.1.26'
-
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
-
-    //AOP
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
-
-    //Security
-    compile("org.springframework.boot:spring-boot-starter-security")
-    compile("io.jsonwebtoken:jjwt:0.7.0")
-
-    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
-    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.6.1'
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-}
-
-//bootRun {
-//    // Use Spring Boot DevTool only when we run Gradle bootRun task
-////    classpath = sourceSets.main.runtimeClasspath + configurations.dev
-//}

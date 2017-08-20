@@ -8,6 +8,8 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger.web.ApiKeyVehicle;
+import springfox.documentation.swagger.web.SecurityConfiguration;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
@@ -24,6 +26,11 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com.sm.autosrv.controller"))
                 .paths(PathSelectors.any())
                 .build();
+    }
+
+    @Bean
+    SecurityConfiguration security() {
+        return new SecurityConfiguration(null, null, null, null, "Bearer access_token", ApiKeyVehicle.HEADER, "Authorization", ",");
     }
 
     private ApiInfo apiInfo() {

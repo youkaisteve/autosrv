@@ -8,5 +8,5 @@ import java.util.ArrayList;
  * Created by youkai on 2017/8/18.
  */
 public interface UserService {
-    ArrayList<User> getUser(Long id);
+    ArrayList<User> getUserList();
 }

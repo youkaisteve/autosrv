@@ -40,36 +40,44 @@ dependencies {
 
 ## LOG
 
-这里使用log4j
+使用logback [Why](https://www.oschina.net/translate/reasons-to-prefer-logbak-over-log4j)
+
+### 依赖
+
+springboot 默认已支持
+
+### 配置
+
+配置文件:src/main/resources/logback-spring.xml
+更多配置请参考[The logback manual](https://logback.qos.ch/manual/index.html)
+
+## 安全认证
+
+使用Spring Security + JWT
+
+[Spring Security Reference](http://docs.spring.io/spring-security/site/docs/4.1.0.RELEASE/reference/htmlsingle/)
+[JWT Introduction](https://jwt.io/introduction/)
 
 ### 依赖
 
 ```
-compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j', version: '1.3.8.RELEASE'
-```
-
-由于log4j和springboot自带的logback有冲突,需要排除logback
-```
-configurations {
-    all*.exclude module: 'spring-boot-starter-logging'
-    all*.exclude module: "logback-classic"
+dependencies {
+    ...
+    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("io.jsonwebtoken:jjwt:0.7.0")
 }
 ```
 
-### 配置
+### 配置&使用
 
-目前使用log4j 1.x, 如果要切换到log4j 2.x,请参考[Apache Log4j 2](https://logging.apache.org/log4j/2.x/manual/index.html)
-
-具体配置参考src/main/resources/log4j.properties
-
-### 安全认证
+writing...
 
 ``TODO``
 
-- [ ] 优化认证功能的结构,考虑如何独立使用
+- [ ] 优化认证功能的结构,独立成单独一个项目
 - [ ] 详细介绍WebSecurity机制
 
-### 依赖注入
+## 依赖注入
 
 ``TODO``
 
@@ -77,21 +85,22 @@ configurations {
 
 [参考文章](https://stormpath.com/blog/spring-boot-dependency-injection)
 
-### Spring-data-jpa
+## MyBatis
 
 ``TODO``
 
-- [ ] Spring-data-jpa 详细介绍使用方法
+writing...
 
 ## TODO
 
 - [ ] figure out how to disable liveload in none dev environment
 - [x] integrate swagger2
+    - [ ] swagger authtoken integrate
 - [x] 统一处理业务异常
 - [x] Security with jwts [Refer to](https://auth0.com/blog/securing-spring-boot-with-jwts/)
-- [ ] log integration
+- [x] logback integration
 - [ ] cache integration
-- [ ] MyBatis integration
+- [x] MyBatis integration
 
 
 ## References
