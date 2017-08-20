@@ -4,18 +4,19 @@ package com.sm.autosrv.aspect;
  * Created by youkai on 2017/8/14.
  */
 
-import com.sm.autosrv.common.log.CommonLog;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class WebLogAspect {
-    CommonLog logger = CommonLog.getLogger(getClass());
+    Logger logger = LoggerFactory.getLogger(getClass());
     ThreadLocal<Long> startTime = new ThreadLocal<>();
 
     @Pointcut("within(com.sm.autosrv..*)")
