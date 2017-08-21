@@ -3,7 +3,7 @@ package com.sm.autosrv.service.interfaces.entity;
 /**
  * Created by youkai on 2017/8/18.
  */
-public class User {
+public class ApplicationUser {
     private Long id;
     private String username;
     private String password;

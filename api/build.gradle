@@ -34,7 +34,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.springframework.boot:spring-boot-devtools")
     compile 'mysql:mysql-connector-java:5.1.26'
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
 
     //AOP
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'

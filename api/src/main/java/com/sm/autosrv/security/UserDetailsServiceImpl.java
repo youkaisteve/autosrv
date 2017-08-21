@@ -1,7 +1,8 @@
 package com.sm.autosrv.security;
 
-import com.sm.autosrv.domain.model.ApplicationUser;
-import com.sm.autosrv.domain.model.ApplicationUserRepository;
+import com.sm.autosrv.service.interfaces.dataservice.UserService;
+import com.sm.autosrv.service.interfaces.entity.ApplicationUser;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,25 +13,22 @@ import java.util.Collections;
 
 /**
  * Created by youkai on 2017/8/15.
- *
  */
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-    private ApplicationUserRepository applicationUserRepository;
 
-    public UserDetailsServiceImpl(ApplicationUserRepository applicationUserRepository) {
-        this.applicationUserRepository = applicationUserRepository;
-    }
+    @Autowired
+    private UserService userService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        ApplicationUser applicationUser = applicationUserRepository.findByUsername(username);
+        ApplicationUser applicationApplicationUser = userService.findByUsername(username);
 
-        if (applicationUser == null) {
+        if (applicationApplicationUser == null) {
             throw new UsernameNotFoundException(username);
         }
 
-        return new User(applicationUser.getUsername(), applicationUser.getPassword(), Collections.emptyList());
+        return new User(applicationApplicationUser.getUsername(), applicationApplicationUser.getPassword(), Collections.emptyList());
     }
 }

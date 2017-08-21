@@ -1,7 +1,7 @@
 package com.sm.autosrv.security;
 
 import com.sm.autosrv.common.serialization.JsonSerializer;
-import com.sm.autosrv.domain.model.ApplicationUser;
+import com.sm.autosrv.service.interfaces.entity.ApplicationUser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.authentication.AuthenticationManager;

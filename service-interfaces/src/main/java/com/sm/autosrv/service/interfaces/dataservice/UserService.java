@@ -1,6 +1,6 @@
 package com.sm.autosrv.service.interfaces.dataservice;
 
-import com.sm.autosrv.service.interfaces.entity.User;
+import com.sm.autosrv.service.interfaces.entity.ApplicationUser;
 
 import java.util.ArrayList;
 
@@ -8,5 +8,7 @@ import java.util.ArrayList;
  * Created by youkai on 2017/8/18.
  */
 public interface UserService {
-    ArrayList<User> getUserList();
+    ArrayList<ApplicationUser> getUserList();
+    ApplicationUser findByUsername(String userName);
+    void save(ApplicationUser user);
 }

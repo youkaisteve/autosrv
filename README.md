@@ -88,9 +88,12 @@ writing...
 
 ## MyBatis
 
+writing...
+
 ``TODO``
 
-writing...
+- [ ] MyBatis 易用性封装
+- [ ] MyBatis 性能优化
 
 ## TODO
 
