@@ -31,7 +31,7 @@ public class WebLogAspect {
     @AfterReturning(returning = "ret", pointcut = "webLog()")
     public void doAfterReturning(Object ret) throws Throwable {
         // 处理完请求，返回内容
-        logger.error("RESPONSE : " + ret);
+        logger.debug("RESPONSE : " + ret);
         logger.debug("SPEND TIME : " + (System.currentTimeMillis() - startTime.get()));
     }
 }

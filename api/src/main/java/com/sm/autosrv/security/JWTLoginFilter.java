@@ -1,6 +1,6 @@
 package com.sm.autosrv.security;
 
-import com.sm.autosrv.common.serialization.JsonSerializer;
+import com.sm.autosrv.common.utils.JacksonMapper;
 import com.sm.autosrv.service.interfaces.entity.ApplicationUser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -33,7 +33,7 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         try {
-            ApplicationUser applicationUser = JsonSerializer.deSerialize(request.getInputStream(), ApplicationUser.class);
+            ApplicationUser applicationUser = JacksonMapper.getInstance().readValue(request.getInputStream(), ApplicationUser.class);
 
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(

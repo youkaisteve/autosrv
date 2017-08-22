@@ -1,4 +1,4 @@
-package com.sm.autosrv.domain.model;
+package com.sm.autosrv.model;
 
 /**
  * Created by youkai on 2017/8/13.

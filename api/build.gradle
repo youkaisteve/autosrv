@@ -27,7 +27,7 @@ subprojects {
 }
 
 dependencies {
-//    compile project(':common')
+    compile project(':common')
     compile project(':service-interfaces')
     compile project(':data-service')
     compile('org.springframework.boot:spring-boot-starter')
@@ -41,8 +41,6 @@ dependencies {
     //Security
     compile("org.springframework.boot:spring-boot-starter-security")
     compile("io.jsonwebtoken:jjwt:0.7.0")
-
-//    compile group: 'com.fasterxml', name: 'jackson-xml-databind', version: '0.6.2'
 
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.6.1'
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.6.1'

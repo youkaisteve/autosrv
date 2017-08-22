@@ -28,15 +28,15 @@ public class SwaggerConfig {
                 .build();
     }
 
-    @Bean
-    SecurityConfiguration security() {
-        return new SecurityConfiguration(null, null, null, null, "Bearer access_token", ApiKeyVehicle.HEADER, "Authorization", ",");
-    }
+//    @Bean
+//    SecurityConfiguration security() {
+//        return new SecurityConfiguration(null, null, null, null, "Bearer access_token", ApiKeyVehicle.HEADER, "Authorization", ",");
+//    }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot中使用Swagger2构建RESTful APIs")
-                .description("请注意,这不是演戏,这……不是演戏!")
+                .title("不知道什么鬼")
+                .description("说了不知道")
                 .termsOfServiceUrl("https://github.com/youkaisteve/autosrv")
                 .version("1.0")
                 .build();
