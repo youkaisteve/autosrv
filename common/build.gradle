@@ -1,14 +1,5 @@
 version '0.0.1-SNAPSHOT'
 
-apply plugin: 'java'
-apply plugin: 'idea'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     compile group: 'com.fasterxml', name: 'jackson-xml-databind', version: '0.6.2'
 }
