@@ -102,9 +102,11 @@ writing...
     - [ ] swagger authtoken integrate
 - [x] 统一处理业务异常
 - [x] Security with jwts [Refer to](https://auth0.com/blog/securing-spring-boot-with-jwts/)
-- [x] logback integration
-- [ ] cache integration
-- [x] MyBatis integration
+- [x] logback
+- [ ] cache
+- [x] MyBatis
+- [ ] dubbo
+- [ [ RabbitMQ
 
 
 ## References

@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 /**
  * Created by youkai on 2017/8/13.
  */
@@ -28,7 +31,9 @@ public class GlobalExceptionHandler {
         } else {
             r.setCode(ErrorInfo.EXCEPTION);
             r.setMessage("系统错误,请联系管理员");
-            logger.error("message:%s\nstacktrace:%s", e.getMessage(), e.getStackTrace());
+            StringWriter sw = new StringWriter();
+            e.printStackTrace(new PrintWriter(sw));
+            logger.error(String.format("********************message********************:\n%s\n********************stacktrace********************:\n%s", e.getMessage(), sw.toString()));
         }
         return r;
     }
