@@ -1,0 +1,5 @@
+${AnsiColor.BRIGHT_GREEN}
+                            日月神教 千秋万载
+${AnsiColor.BRIGHT_RED}
+application version: ${application.version}${application.formatted-version}
+spring-boot version: ${spring-boot.version}${spring-boot.formatted-version}
